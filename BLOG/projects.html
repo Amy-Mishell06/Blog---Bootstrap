@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+
+    <link rel="stylesheet" href="assets/css/create_project.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <main style="min-height:100vh;display:flex;align-items:center;justify-content:center;">
+        <div class="card">
+
+            <h2 class="title">Nuevo Proyecto</h2>
+
+            <form id="projectForm">
+                <div class="field">
+                    <label for="titulo">Título del proyecto</label>
+                    <input type="text" id="titulo" placeholder="Ej: Portafolio Web" required>
+                </div>
+
+                <div class="field">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" placeholder="Describe tu proyecto..." required></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="imagen">Imagen del proyecto</label>
+                    <input type="file" id="imagen" accept="image/*">
+                    <img id="preview" class="preview" alt="Vista previa">
+                </div>
+
+                <button type="submit" class="btn">Guardar Proyecto</button>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- JS (DOM + preview de imagen) -->
+    <script>
+        const imagenInput = document.getElementById("imagen");
+        const preview = document.getElementById("preview");
+
+        imagenInput.addEventListener("change", () => {
+            const file = imagenInput.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = e => {
+                preview.src = e.target.result;
+                preview.classList.add("show");
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById("projectForm").addEventListener("submit", e => {
+            e.preventDefault();
+            alert("Proyecto guardado (simulado)");
+            window.open("dashboard.html", "_blank");
+        });
+    </script>
+
+</body>
+</html>
