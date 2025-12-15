@@ -43,7 +43,7 @@ body {
   display:flex;
   align-items:center;
   justify-content:center;
-  background-image: linear-gradient(-20deg, rgba(36,59,55,0.96) 20%, rgba(82,60,16,0.75)), url("../images/showcase.jpg");
+  background-image: linear-gradient(-20deg, rgba(36,59,55,0.96) 20%, rgba(82,60,16,0.75)), url("../images/programando.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;

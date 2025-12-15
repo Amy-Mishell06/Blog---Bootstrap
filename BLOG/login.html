@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <div data-include="components/navbar.html"></div>
+
     <div class="card">
         <aside class="panel-image">
             <div class="brand">
@@ -30,7 +32,8 @@
                     <label for="password"> Contraseña</label>
                     <input type="password" name="password" id="password" inputmode="password"
                         autocomplete="current-password" placeholder="••••••••" required minlength="6">
-                    <button type="button" class="toggle-pass" aria-label="Mostrar contraseña" id="togglePass">Mostrar</button>
+                    <button type="button" class="toggle-pass" aria-label="Mostrar contraseña"
+                        id="togglePass">Mostrar</button>
                 </div>
 
                 <div class="row" style="margin-bottom:14px;justify-content:space-between">
@@ -50,6 +53,10 @@
             </form>
         </main>
     </div>
+    <div data-include="components/footer.html"></div>
+
+    <script src="assets/js/include.js"></script>
+
 </body>
 
 </html>
